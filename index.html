@@ -38,7 +38,8 @@
     <!-- ============ HERO ============ -->
     <section class="hero">
       <div class="container">
-        <p class="eyebrow"><span class="ru">Личные консультации · Нью-Йорк · RU / EN</span><span class="en">Private consultations · New York · RU / EN</span></p>
+        <figure class="hero-avatar"><img src="assets/avatar.jpg" alt="Artemiy Kruglov"></figure>
+        <p class="eyebrow"><span class="ru">Личные консультации · Нью-Йорк</span><span class="en">Private consultations · New York</span></p>
         <h1 class="hero-title">
           <span class="ru">Превращаю бизнес-идеи<br>в работающие продукты</span>
           <span class="en">I turn business ideas<br>into working products</span>
@@ -114,6 +115,10 @@
       <div class="container">
         <p class="eyebrow"><span class="ru">Как это устроено</span><span class="en">How it works</span></p>
         <h2 class="section-title"><span class="ru">Честный формат: мало слотов, ручной&nbsp;отбор</span><span class="en">An honest format: few slots, hand-picked</span></h2>
+        <p class="how-note">
+          <span class="ru">Сессия бесплатная. Я тестирую формат и&nbsp;открываю несколько слотов в&nbsp;неделю - поэтому отбираю заявки вручную.</span>
+          <span class="en">The session is free. I'm testing the format with a few weekly slots - that's why applications are reviewed by hand.</span>
+        </p>
         <div class="steps">
           <div class="step">
             <div class="step-num">1</div>
@@ -131,10 +136,6 @@
             <p><span class="ru">Без воды: разбираем ситуацию, я делюсь конкретными шагами. Уйдёте с&nbsp;ясным следующим действием.</span><span class="en">No fluff: we unpack your situation and I share concrete steps. You leave with a clear next action.</span></p>
           </div>
         </div>
-        <p class="how-note">
-          <span class="ru">Сессия бесплатная. Я тестирую формат и&nbsp;открываю несколько слотов в&nbsp;неделю - поэтому отбираю заявки вручную.</span>
-          <span class="en">The session is free. I'm testing the format with a few weekly slots - that's why applications are reviewed by hand.</span>
-        </p>
       </div>
     </section>
 
@@ -154,22 +155,24 @@
           <figure class="about-photo">
             <img src="assets/portrait.jpg" alt="Artemiy Kruglov" loading="lazy">
           </figure>
-          <div class="side-block">
-            <h4><span class="ru">Работал с</span><span class="en">Worked with</span></h4>
-            <ul class="plain-list">
-              <li>Visa</li><li>Microsoft</li><li>Bank of America</li><li>TD Bank</li><li>Google</li><li>Apple</li><li>Wells Fargo</li><li>Marriott</li><li>Сбербанк / Sberbank</li><li>Banco Central do Brasil</li><li>Central Bank of Nigeria</li>
-            </ul>
-          </div>
-          <div class="side-block">
-            <h4><span class="ru">Форматы работы</span><span class="en">How I work</span></h4>
-            <ul class="plain-list">
-              <li><span class="ru">Продуктовая стратегия и CVP</span><span class="en">Product strategy &amp; CVP</span></li>
-              <li><span class="ru">Co-creation и дизайн-спринты</span><span class="en">Co-creation &amp; design sprints</span></li>
-              <li><span class="ru">Исследования и сегментация</span><span class="en">Research &amp; segmentation</span></li>
-              <li><span class="ru">Запуск MVP и метрики</span><span class="en">MVP launch &amp; metrics</span></li>
-            </ul>
-          </div>
         </aside>
+      </div>
+      <div class="container about-lists">
+        <div class="about-work">
+          <h4><span class="ru">Форматы работы</span><span class="en">How I work</span></h4>
+          <ul class="plain-list">
+            <li><span class="ru">Продуктовая стратегия и CVP</span><span class="en">Product strategy &amp; CVP</span></li>
+            <li><span class="ru">Co-creation и дизайн-спринты</span><span class="en">Co-creation &amp; design sprints</span></li>
+            <li><span class="ru">Исследования и сегментация</span><span class="en">Research &amp; segmentation</span></li>
+            <li><span class="ru">Запуск MVP и метрики</span><span class="en">MVP launch &amp; metrics</span></li>
+          </ul>
+        </div>
+        <div class="about-work">
+          <h4><span class="ru">Работал с</span><span class="en">Worked with</span></h4>
+          <ul class="plain-list worked-list">
+            <li>Visa</li><li>Microsoft</li><li>Bank of America</li><li>TD Bank</li><li>Google</li><li>Apple</li><li>Wells Fargo</li><li>Marriott</li><li>Сбербанк / Sberbank</li><li>Banco Central do Brasil</li><li>Central Bank of Nigeria</li><li>McDonald's</li>
+            </ul>
+        </div>
       </div>
     </section>
 
@@ -235,6 +238,9 @@
           <span class="en">Pick a slot and answer three short questions. I personally review each application and confirm within 1–2&nbsp;days.</span>
         </p>
         <div id="cal-embed" class="cal-embed" aria-live="polite"></div>
+        <button id="cal-mobile" class="btn btn-primary cal-mobile-btn" type="button" data-cal-namespace="mobile" data-cal-link="arkruglov/intro" hidden>
+          <span class="ru">Выбрать время</span><span class="en">Pick a time</span>
+        </button>
         <div id="cal-fallback" class="cal-fallback" hidden>
           <p>
             <span class="ru">Онлайн-запись вот-вот откроется. Пока - напишите мне в&nbsp;директ Instagram, отвечу лично.</span>
