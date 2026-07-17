@@ -17,6 +17,18 @@
 
 html { scroll-behavior: smooth; }
 
+section[id], [id="book"] { scroll-margin-top: 76px; }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}
+
 body {
   font-family: var(--serif-text);
   font-size: 17px;
@@ -237,7 +249,9 @@ p { color: var(--ink-soft); }
 .topic-card {
   background: var(--ivory);
   padding: 40px 36px;
+  transition: background 0.3s ease;
 }
+.topic-card:hover { background: #FFFDF8; }
 .topic-index {
   font-family: var(--serif-display);
   font-style: italic;
@@ -303,6 +317,7 @@ p { color: var(--ink-soft); }
   display: block;
   width: 100%;
   max-width: 100%;
+  height: auto;
   border-radius: 2px;
 }
 .side-block + .side-block { margin-top: 40px; }
@@ -426,7 +441,7 @@ p { color: var(--ink-soft); }
 .site-footer {
   background: var(--ink);
   border-top: 1px solid rgba(250, 247, 241, 0.14);
-  padding: 56px 0;
+  padding: 56px 0 calc(56px + env(safe-area-inset-bottom, 0px));
 }
 .footer-inner {
   display: grid;
@@ -505,7 +520,7 @@ p { color: var(--ink-soft); }
   .wordmark-dot { display: none; }
   .wordmark-sub { font-size: 9px; letter-spacing: 0.22em; }
   .header-actions { gap: 8px; }
-  .btn-small { padding: 0 12px; height: 36px; font-size: 12px; }
-  .lang-toggle { padding: 0 10px; height: 36px; font-size: 12px; }
+  .btn-small { padding: 0 14px; height: 42px; font-size: 12px; }
+  .lang-toggle { padding: 0 12px; height: 42px; font-size: 12px; }
   .hero-avatar img { width: 72px; height: 72px; }
 }
